@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+import requests
+TOKEN = "" #Here must be a your bot token
+chat_id = "" #Here must be your chatID
+message = "Хозяин! Работа выполнена!"
+url = f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id={chat_id}&text={message}"
+print(requests.get(url).json()) # Send a message
+
+#@Familiar_Dobot just send a message and catch your chatID
+#After that execute this script after main pipelines
